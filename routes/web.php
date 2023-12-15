@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\http\controllers\{SupportController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/supports', [SupportController::class, 'index'])->name('support.index');
 
 Route::get('/', function () {
     return view('welcome');
