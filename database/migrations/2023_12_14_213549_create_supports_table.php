@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('supports', function (Blueprint $table) {
             $table->id();
+            $table->string('subject');
+            $table->enum('status', ['a', 'p', 'c']);
+            $table->text('body');
             $table->timestamps();
         });
     }
